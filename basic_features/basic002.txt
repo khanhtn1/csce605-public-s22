@@ -1,0 +1,18 @@
+//Check: arrays, while, terminating ; optional
+main 
+var i, j;
+array [ 4 ] a;
+array [ 4 ][ 4 ] b;
+{
+    let i := 0;
+	let j := 0;
+	while i < 4 do
+		while j < 4 do
+			let b[ i ][ j ] := j;
+			let j := j + 1
+		od;
+		let a[ i ] := i;
+		let i := i + 1
+	od;
+	call OutputNum(j)
+}.

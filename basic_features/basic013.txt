@@ -1,0 +1,37 @@
+//check: simple array access 
+main
+var i, j, k;
+array[ 10 ] a;
+array[2][3][4] b;
+
+void function rec(n)
+{
+    if n == 0 then 
+        return; 
+    fi;
+    call OutputNum(n);
+    call rec(n - 1);
+};
+
+void multi_dim_array() 
+{
+    let b[1][2][3] := 8;
+    call rec(b[1][2][3]);
+};
+
+{
+    let i := 0;
+    while i < 10 do
+        let a[i] := i+10;
+        let i++; //let i := i+1;
+    od;
+    
+    while i > 0 do
+        let i--; //let i := i-1;
+        call OutputNum(a[i]);
+    od;
+
+    call OutputNewLine();
+    call multi_dim_array();
+    return;
+}.

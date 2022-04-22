@@ -1,0 +1,7 @@
+//check: input file *required, expression as parameter
+main
+var x;
+{
+	let x := call InputNum();
+	call OutputNum(x+x*3);
+}.

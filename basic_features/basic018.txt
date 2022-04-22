@@ -1,0 +1,49 @@
+// check: whole array assignment
+main
+array[ 10 ] a, b;
+var size;
+var i;
+
+void function output(is_b)
+{   
+    var i;
+    let i := 0;
+    if is_b == 0 then
+        while i < size do
+            call OutputNum(a[i]);
+            let i := i + 1;
+        od;
+    else 
+        repeat
+            call OutputNum(b[i]);
+            let i := i + 1;
+        until i==size;
+    fi;
+    call OutputNewLine();
+};
+
+void function swap()
+{
+    array [10] c;
+
+    let c := a;
+	let a := b;
+	let b := c;
+};
+
+{
+    let i := 0;
+    let size := 10;
+    while i < size do
+        let a[i] := i + size;
+        let b[i] := 5*i+1;
+        let i := i+1;
+    od;
+    
+    call output(0); //array a
+    call output(1); //array b
+    call OutputNewLine();
+    call swap();
+    call output(0); //array a
+    call output(1); //array b
+}.

@@ -1,0 +1,17 @@
+// check: recursive function
+main
+var myvar;
+
+function get_1sum_to_n(n)
+{
+	if n == 1 then
+		return 1;
+	fi;
+	return call get_1sum_to_n(n-1) + n; 
+};
+
+{
+    let myvar := call get_1sum_to_n(10);
+    call OutputNum(myvar); //55
+    call OutputNewLine();
+}.

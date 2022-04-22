@@ -1,0 +1,9 @@
+// Check: case-sensitive: outputnum, outputnewline
+main
+{
+    call outputnum(2);
+	call outputnum(0);
+	call outputnum(2);
+	call outputnum(1);
+	call outputnewline();
+}.

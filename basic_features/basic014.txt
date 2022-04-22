@@ -1,0 +1,51 @@
+// check: array local and global
+main
+array[5] input;
+var max_number;
+
+function max(a1,a2,a3,a4,a5)
+{
+    array[5] arg;
+    var size,temp,i;
+
+    let arg[0] := a1;
+    let arg[1] := a2;
+    let arg[2] := a3;
+    let arg[3] := a4;
+    let arg[4] := a5;
+    
+    call OutputNum(arg[0]);
+    call OutputNum(arg[1]);
+    call OutputNum(arg[2]);
+    call OutputNum(arg[3]);
+    call OutputNum(arg[4]);
+    call OutputNewLine();
+    
+    let size := 5;
+    let i := 1;
+    let temp := arg[0];
+
+    while i < size
+    do
+        if arg[i] > temp
+        then
+            let temp := arg[i];
+        fi;
+        call OutputNum(temp);
+        let i := i + 1;
+    od;
+    call OutputNewLine();
+    return temp;
+};
+
+{
+        let input[0] := 22;
+        let input[1] := 16;
+        let input[2] := 434;
+        let input[3] := 170;
+        let input[4] := 605;
+        
+        let max_number := call max(input[0],input[1],input[2],input[3],input[4]);
+        call OutputNum(max_number);
+        call OutputNewLine();
+}.

@@ -1,0 +1,32 @@
+// Error program, use void function in expression, non-void function has return empty
+main
+var y;
+
+simple()
+{
+    return 5 * 10;
+};
+
+void foo() 
+{
+    var i;
+    let i := call simple();
+    return i;
+};
+
+bar() 
+{
+    var i;
+    let i := 15;
+    return; 
+};
+
+{
+    let y = call foo() + 1 ;
+    let y++;
+    call OutputNum(y);
+    call OutputNewLine();
+    let y = call bar() + 2 ;
+    call OutputNum(y);
+    call OutputNewLine();
+}.

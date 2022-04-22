@@ -1,0 +1,59 @@
+// check: array manipulation
+main
+var i, j, k;
+array[ 10 ] a,b;
+var smallsize;
+array[ 20 ] c;
+var size;
+
+void function output_combine()
+{        
+    var i;
+    let i := 0;
+    while i < size do
+            call OutputNum(c[i]);
+            let i := i + 1;
+    od;
+};
+
+
+function combine(from_a, from_b)
+{
+    var i,j,k;
+    let i := 0;
+    let j := 0;
+    repeat
+        let c[i] := a[j];
+        let i := i + 1;
+        let j := j + 1;
+    until j >= from_a;
+    let j := 0;
+    repeat 
+        let c[i] := b[j];
+        let i := i + 1;
+        let j := j + 1;
+    until j >= from_b;
+    return from_a+from_b;
+};
+
+{
+    let i := 0;
+    let smallsize := 10;
+    while i < smallsize do
+            let a[i] := i + smallsize;
+            let i := i+1;
+    od;
+    
+    while i > 0 do
+        let i := i-1;
+        let b[i] := i;
+    od;
+    
+    let size := call combine(5,15);
+    call output_combine();
+    call OutputNewLine();
+    call OutputNum(a[i]);
+    call OutputNum(b[i]);
+    call OutputNum(c[i]);
+    call OutputNewLine()
+}.

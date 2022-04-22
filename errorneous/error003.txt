@@ -1,0 +1,34 @@
+// error program: redefine function
+main
+var i,j;
+
+function sum_to_n(n) 
+{
+    var i,j;
+    let i := 0;
+	let j := 1;
+    while j <= n do
+		let i += j;
+		let j ++;
+	od;
+    return i;
+};
+
+function sum_to_n(still_n)
+{
+    var i,j;
+    let i := 0;
+	let j := 1;
+    while j <= still_n do
+		let i := i + j * 1;
+		let j ++;
+	od;
+    return i;
+};
+
+{
+    let i = 10;
+    call OutputNum(call sum_to_n(i));
+    call OutputNum(call sum_to_n(i*2+j));
+    call OutputNewLine();
+}

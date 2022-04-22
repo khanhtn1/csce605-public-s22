@@ -1,0 +1,39 @@
+//check: multi_dim array, requires inputfile
+main
+array [2][3][2][3][2] a;
+var input;
+
+function factIter(n)
+{   
+    var i, f;
+    let i := 1;
+    let f := 1;
+    while i <= n do
+        let f := f * i;
+        let i := i + 1;
+    od;
+    return f;
+};
+
+function factRecursive(n)
+{
+    if n <= 1 then
+        return 1;
+    fi;
+    return call factRecursive(n - 1) * n;
+};
+
+{
+    let a[1][1][1][1][1] := call InputNum();
+    let a[1][2][1][2][1] := call InputNum();
+    let input := ( a[1][1][1][1][1] + a[1][2][1][2][1] ) / 4 + 1 ; // 28/4 +1 =8
+    call OutputNewLine();
+    call OutputNum(call factIter(input));
+    call OutputNewLine();
+    call OutputNum(call factRecursive(input));
+    call OutputNewLine();
+}
+.
+//?: ?: 
+//5040  
+//5040 

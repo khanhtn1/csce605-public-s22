@@ -1,0 +1,18 @@
+//check: function, require inputfile
+main
+var input, myVar;
+
+function getTwoSum(n)
+{
+    var i,k;
+    let i := call InputNum();
+    let k := i + n;
+    return k;
+};
+
+{
+    let input := call InputNum();
+    let myVar := call getTwoSum(input);
+    call OutputNum(myVar); //expect 605
+    call OutputNewLine();
+}.

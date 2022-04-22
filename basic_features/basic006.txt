@@ -1,0 +1,37 @@
+// Check: void function
+
+main
+var num, i, j;
+void function check_for_sanity()
+{
+    call OutputNum(5);
+};
+
+function get_const(n) 
+{
+    return n;
+};
+
+void function pyramic_print() 
+{
+    var num, i, j;
+    call OutputNewLine();
+    let num := call get_const(15);
+    let i := 1;
+    let j := 0;
+    while i < num + 1 do
+        let j := 0;
+        while j < i do
+            call OutputNum(1);
+            let j := j + 1;    
+        od;
+        call OutputNewLine();
+        let i := i + 1;
+    od; 
+};
+
+{
+    call check_for_sanity();
+    call OutputNewLine();
+    call pyramic_print();
+}.

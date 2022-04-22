@@ -1,0 +1,20 @@
+// error program: passing array to int, or using int to index
+
+main
+var a,x,y;
+array[10] arr;
+
+function foo(n) 
+{
+    return n;
+}
+
+
+{
+    call foo(arr);
+    let x = 100;
+    let a[1] = call foo(x);
+    let i = 1;   
+    call OutputNum(a[i]);
+}
+.

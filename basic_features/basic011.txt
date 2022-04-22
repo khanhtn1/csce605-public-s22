@@ -1,0 +1,41 @@
+main
+var input;
+
+function factIteration(n)
+{
+    var i, f;
+    let i := 1;
+    let f := 1;
+    repeat
+        let f *= i;
+        let i += 1;
+    until i > n ;
+    return f;
+};
+
+function factRecursive(n)
+{
+    if n <= 1 then
+        return 1;
+    fi;
+    return call factRecursive(n - 1) * n;
+};
+
+function Tail_Recursive_Sum(n, i)
+{	
+	if n == 0 then
+		return i;
+	fi;
+	return call Tail_Recursive_Sum(n-1, i + n);
+};
+
+{
+    let input := call InputNum(); //call with 10
+    call outputnewline();
+    call outputnum(call factIteration(input));
+    call outputnewline();
+    call outputnum(call factRecursive(input));
+    call outputnewline();
+    call outputnum(call Tail_Recursive_Sum(input, 0));
+    call outputnewline();
+}.

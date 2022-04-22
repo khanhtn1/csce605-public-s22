@@ -1,0 +1,11 @@
+//check: repeat until, require input
+main
+var x;
+{
+    repeat
+        let x := call InputNum(); //stop when -2
+        let x ++;
+        call OutputNum(x);
+        call OutputNewLine();
+    until x != -1;
+}.

@@ -1,0 +1,58 @@
+//check: array manipulation
+main
+var i, j, k;
+array[ 10 ] a;
+
+void function outputbackward()
+{
+    while i > 0 do
+        let i := i - 1;
+        call OutputNum(a[i]);
+    od;
+};
+
+procedure outputforward()
+{
+    while i < 10 do
+        call OutputNum(a[i]);
+        let i := i + 1;
+    od;
+};
+
+procedure sort(n)
+var i,j,k;
+{
+    let i := 0;
+    while i < n do
+        let j := i;
+        while j < n do
+            if a[i] < a[j] 
+            then
+                let k := a[i];
+                let a[i] := a[j];
+                let a[j] := k;
+            fi;
+            let j := j + 1;
+        od;
+        let i := i + 1;
+    od; 
+};
+{
+    let i := 0;
+    while i < 10 do
+            let a[i] := i + 10;
+            let i := i + 1;
+    od;
+    
+    call outputbackward();
+    call OutputNewLine();
+    call sort(5);
+    call outputforward();
+    let i := 10;
+    call OutputNewLine();
+    call outputbackward();
+}.
+
+//19  18  17  16  15  14  13  12  11  10  
+//14  13  12  11  10  15  16  17  18  19  
+//19  18  17  16  15  10  11  12  13  14 

@@ -1,0 +1,7 @@
+// bad program: error var-init
+main
+var ident := 4;
+{
+	call OutputNum(ident);
+	// this is a comment
+}.

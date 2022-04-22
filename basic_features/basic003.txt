@@ -1,0 +1,26 @@
+//check: early return in main
+main
+var x, y;
+{
+    let x := 51; 
+    let y := 2 * x;
+    if (x + 0) < (y - 0) then
+        call OutputNum(y);
+        call OutputNewLine();
+    fi;
+    call OutputNum(y);
+
+    let x := 42; 
+    let y := 2 * x;
+    if x == y then
+        call OutputNum(y);
+        call OutputNewLine();
+        return;
+    else
+        call OutputNum(x);
+        call OutputNewLine();
+        return; 
+    fi;
+    return;
+}.
+//Check: if, relation

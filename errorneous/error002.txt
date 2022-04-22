@@ -1,0 +1,11 @@
+// error expected: lone ;, use p without declaring
+main
+var ch;
+{
+	//comment
+	;;
+	;
+	;
+	let p := 2;
+	call OutputNum(p);
+}.

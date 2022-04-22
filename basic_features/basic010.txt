@@ -1,0 +1,25 @@
+// Fibonacci using recursive functions, require inputfile, multiple return statements
+main
+var input, result;
+
+function fibonacci(n)
+{
+	if n == 1 then
+		return 1;
+	fi;
+	
+	if n == 0 then
+		return 0;
+	fi;
+	
+    return call fibonacci(n-1) + call fibonacci(n-2);
+};
+
+{
+    let input := call InputNum(); //call with 10
+    let result := call fibonacci(input);
+    call OutputNum(input);
+    call OutputNewLine();
+    call OutputNum(result);
+    call OutputNewLine();
+}.

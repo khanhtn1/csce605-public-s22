@@ -1,0 +1,31 @@
+// Check: global variables, empty function, void function, require inputfile
+// case of redundant load and store of global variables
+main
+var input, max;
+
+void function empty_function() 
+{
+
+};
+
+void function maxNumber(n)
+{	
+    var i, curr;
+	let max := 0;
+	let i := 0;
+	
+	while i < n do
+		let curr := call InputNum();
+		if curr > max then
+			let max := curr;
+		fi;
+		let i := i + 1;
+	od;
+};
+
+{
+    let input := call InputNum();
+    call maxNumber(input);
+    call OutputNum(max);
+    call OutputNewLine();
+}.

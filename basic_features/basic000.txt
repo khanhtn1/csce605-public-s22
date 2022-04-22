@@ -1,0 +1,16 @@
+//Simple parsing test
+//Check: negative number, whitespace, uninitialized c, terminating ; optional, comment
+main 
+var a,b,c,d;
+{
+    let d := 5 + 2 * 10 - 2;
+    let b := 5 + -2 * -10 + 2;
+    let a := b + c + d; 
+    let b := a * a + b * b;
+    let a := 5 + 2*b;
+    let a := 2*c+d;
+    let a := a-c/(d-d+1); 
+    call OutputNum(a);
+    call OutputNewLine();
+    call OutputNum(b)
+}.

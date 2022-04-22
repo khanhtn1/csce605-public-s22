@@ -1,0 +1,21 @@
+// recursive void function, require inputfile
+main
+var input;
+
+void function print_reverse()
+{	
+    var input; //local shadows global
+	let input := call InputNum();
+	if input > 0 then
+    	call print_reverse();
+	    call OutputNum(input);
+    	call OutputNewLine();
+	fi;
+};
+
+{
+    let input := call InputNum();
+	call printreverse();
+    call OutputNum(input); // 7 -> 1, 605
+    call OutputNewLine();
+}.

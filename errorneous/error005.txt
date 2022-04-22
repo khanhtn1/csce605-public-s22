@@ -1,0 +1,26 @@
+// error: void function has return, non-void function doesn't have return
+main
+
+void foo(n) 
+{
+    return n;
+};
+
+foo(n) 
+{
+    call OutputNum(10+n);
+};
+
+bar(n) 
+{
+    var x;
+    call OutputNum(n*10);
+    call OutputNewLine();
+    let x := call foo(n);
+    call OutputNum(x+0);
+    call OutputNewLine();
+};
+
+{
+    call bar(10);
+}.
