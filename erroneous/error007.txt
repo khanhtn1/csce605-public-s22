@@ -1,0 +1,51 @@
+// error program: parsing issues
+
+main
+
+var _a;  // ident cannot start with _ 
+var a.b; // no . is allowed
+var a;
+var x;
+var camelCase;
+var c++_Variable;
+
+array[-5][6] arr1; // language allows it but you should prevent this
+array[0] 1arr; // ditto and ident issue
+
+function foo(n) 
+{
+    var t;
+    let t := *(&n);
+    return t;
+};
+
+function foo(x,y) 
+{
+    return x - - y;
+}  //not ending properly
+
+function missingKeyWord() 
+{
+    var i,j;
+    repeat 
+        let i := j
+    return i+j;
+};
+
+{
+    let &a := 0xffff;
+
+    let x := call foo(call foo(5)--);
+
+    let a := call foo(x--) + call foo(5);
+
+    let a := call foo(10); 
+    let x := call foo(a,a);
+    let x := call foo(a++, a--);
+
+    call OutputNewLine;
+    call InputNum;
+}
+.
+
+
