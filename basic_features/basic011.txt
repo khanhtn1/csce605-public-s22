@@ -26,7 +26,7 @@ function Tail_Recursive_Sum(n, i)
 	if n == 0 then
 		return i;
 	fi;
-	return call Tail_Recursive_Sum(n-1, i + n);
+	return call Tail_Recursive_Sum(n - 1, i + n);
 };
 
 {
