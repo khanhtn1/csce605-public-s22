@@ -7,7 +7,7 @@ function get_1sum_to_n(n)
 	if n == 1 then
 		return 1;
 	fi;
-	return call get_1sum_to_n(n-1) + n; 
+	return call get_1sum_to_n(n - 1) + n; 
 };
 
 {
