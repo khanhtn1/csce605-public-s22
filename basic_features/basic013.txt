@@ -13,7 +13,7 @@ void function rec(n)
     call rec(n - 1);
 };
 
-void multi_dim_array() 
+void function multi_dim_array() 
 {
     let b[1][2][3] := 8;
     call rec(b[1][2][3]);
