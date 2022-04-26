@@ -1,0 +1,48 @@
+//check: shadowing /scoping, recursive
+
+main
+
+var i;
+array [10] a;
+var n;
+
+void function print_forward(i, n) 
+{
+    if n == i then
+        call OutputNum(a[n]);
+        return;
+    fi;
+    call print_forward(i, n - 1);
+    call OutputNum(a[n]);
+    
+};
+
+
+void function print_backward_and_pyramid(n, i)
+{
+    call OutputNum(a[n]);
+    if n == i then
+        return;
+    fi;
+    call print_backward(n - 1, i);
+    call OutputNewLine();
+    call print_forward(i, n);
+};
+
+{
+    let n := 10;
+    let i := 0;
+    repeat
+        let a[i] := n + i;
+        let i++;
+    until i == n;
+    
+    call print_forward(0, n - 1);
+    call OutputNewLine();
+
+    let n--;
+    call print_backward_and_pyramid(0, n);
+    call OutputNewLine();
+    
+}
+.
