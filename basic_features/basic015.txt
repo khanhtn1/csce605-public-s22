@@ -11,7 +11,7 @@ void function outputbackward()
     od;
 };
 
-procedure outputforward()
+void function outputforward()
 {
     while i < 10 do
         call OutputNum(a[i]);
@@ -19,9 +19,9 @@ procedure outputforward()
     od;
 };
 
-procedure sort(n)
-var i,j,k;
+void function sort(n)
 {
+    var i,j,k;
     let i := 0;
     while i < n do
         let j := i;
