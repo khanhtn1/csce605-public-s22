@@ -1,17 +1,17 @@
 // error: void function has return, non-void function doesn't have return
 main
 
-void foo(n) 
+void function foo(n) 
 {
     return n;
 };
 
-foo(n) 
+function foo(n) 
 {
     call OutputNum(10+n);
 };
 
-bar(n) 
+void function bar(n) 
 {
     var x;
     call OutputNum(n*10);
