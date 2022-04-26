@@ -1,22 +1,22 @@
-// Error program with parsing errors: missing keywords, etc 
-// Semantics errors such as use void function in expression, non-void function has return empty 
-// are refactored to becomes error009
+// Mod from error004
+// Error program with semantics errors: use void function in expression, non-void function has return empty 
+// No parsing errors
 main
 var y;
 
-simple()
+function simple()
 {
     return 5 * 10;
 };
 
-void foo() 
+void function foo() 
 {
     var i;
     let i := call simple();
     return i;
 };
 
-bar() 
+function bar() 
 {
     var i;
     let i := 15;
@@ -30,5 +30,7 @@ bar()
     call OutputNewLine();
     let y = call bar() + 2 ;
     call OutputNum(y);
+    call OutputNewLine();
+    call OutputNum(call simple(y));
     call OutputNewLine();
 }.
