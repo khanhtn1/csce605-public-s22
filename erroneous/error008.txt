@@ -1,4 +1,4 @@
-// error program: parser errors. '=' on line30 and no '.' at end
+// error program: redefine function
 main
 var i,j;
 
@@ -27,8 +27,8 @@ function sum_to_n(still_n)
 };
 
 {
-    let i = 10;
+    let i := 10;
     call OutputNum(call sum_to_n(i));
     call OutputNum(call sum_to_n(i*2+j));
     call OutputNewLine();
-}
+}.
