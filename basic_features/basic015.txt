@@ -20,8 +20,8 @@ void function outputforward()
 };
 
 void function sort(n)
-var i,j,k;
 {
+    var i,j,k;
     let i := 0;
     while i < n do
         let j := i;
