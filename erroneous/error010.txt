@@ -1,0 +1,26 @@
+// error program: redefined main
+
+main 
+
+void function main(n) // this is not an issue
+{
+    call OutputNum(n);
+    call OutputNewLine();
+};
+
+void function main() 
+{
+    call main(10);
+};
+
+function foo(n)
+{
+    call OutputNum(10+n);
+    call OutputNewLine();
+    call main(n);
+    return n*2;
+};
+
+{
+    call foo(100);
+}.
