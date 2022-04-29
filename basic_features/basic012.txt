@@ -15,7 +15,7 @@ void function print_reverse()
 
 {
     let input := call InputNum();
-	call printreverse();
+	call print_reverse();
     call OutputNum(input); // 7 -> 1, 605
     call OutputNewLine();
 }.
