@@ -22,7 +22,7 @@ function factRecursive(n)
 };
 
 function Tail_Recursive_Sum(n, i)
-{	
+{
 	if n == 0 then
 		return i;
 	fi;
@@ -31,11 +31,11 @@ function Tail_Recursive_Sum(n, i)
 
 {
     let input := call InputNum(); //call with 10
-    call outputnewline();
-    call outputnum(call factIteration(input));
-    call outputnewline();
-    call outputnum(call factRecursive(input));
-    call outputnewline();
-    call outputnum(call Tail_Recursive_Sum(input, 0));
-    call outputnewline();
+    call OutputNewLine();
+    call OutputNum(call factIteration(input));
+    call OutputNewLine();
+    call OutputNum(call factRecursive(input));
+    call OutputNewLine();
+    call OutputNum(call Tail_Recursive_Sum(input, 0));
+    call OutputNewLine();
 }.
