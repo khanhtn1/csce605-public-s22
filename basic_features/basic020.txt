@@ -24,7 +24,7 @@ void function print_backward_and_pyramid(n, i)
     if n == i then
         return;
     fi;
-    call print_backward(n - 1, i);
+    call print_forward(n - 1, i);
     call OutputNewLine();
     call print_forward(i, n);
 };
