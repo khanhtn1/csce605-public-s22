@@ -7,5 +7,5 @@ var x;
         let x ++;
         call OutputNum(x);
         call OutputNewLine();
-    until x != -1;
+    until x == -1;
 }.
