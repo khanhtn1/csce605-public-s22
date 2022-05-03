@@ -1,0 +1,16 @@
+// error program: assign int into array: type mismatch on line 10
+
+main
+var x,y;
+array[10][10] arr;
+
+{
+   
+    let x := 100;
+    let arr[1] := x;
+    let arr[3] := arr[5]; //this has no type error
+    let y :=  x * 10;  
+    let arr[x/20][x/20] := y; 
+    call OutputNum(arr[3+2+0][5*1]);
+}
+.
