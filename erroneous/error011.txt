@@ -1,0 +1,25 @@
+// error program: should prevent dimension of array <=0
+main
+
+var i,j;
+var camelCase;
+
+array[-5][6] arr1; // language allows it but you should prevent this
+array[0] arr2; // ditto 
+
+{
+    let i := 0;
+    let arr2[i] := 10;
+
+    let arr1[i][i+1] := 20;
+    
+    let arr1[0][2] := 30;
+
+    let arr1[0][0] := 0;
+    let arr2[arr1[i][0]] := 1;
+
+    call OutputNum(i);
+    call OutputNum(arr2[i]);
+    call OutputNum(arr1[0][0]);
+    call OutputNewLine();
+}.
