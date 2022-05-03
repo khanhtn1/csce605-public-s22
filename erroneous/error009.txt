@@ -24,11 +24,11 @@ function bar()
 };
 
 {
-    let y = call foo() + 1 ;
+    let y := call foo() + 1 ;
     let y++;
     call OutputNum(y);
     call OutputNewLine();
-    let y = call bar() + 2 ;
+    let y := call bar() + 2 ;
     call OutputNum(y);
     call OutputNewLine();
     call OutputNum(call simple(y));
