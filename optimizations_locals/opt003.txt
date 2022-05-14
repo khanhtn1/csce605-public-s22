@@ -1,0 +1,34 @@
+//Basic if statement test
+// Constant Folding
+main
+
+void function test() {
+	var a, b;
+
+	let a := 2410;
+	let b := 4256;
+	if a > b then
+		let a ++;
+		let b := a;
+	else
+		let b += 3;
+		let a := call InputNum(); // call with -10
+		let a := (b + b)* 1; 
+	fi;
+	
+	if a < b then
+		let a -= 2 //deadcode
+	fi;
+	
+	call OutputNum(a);
+	call OutputNewLine();
+	call OutputNum(b)
+};
+
+{
+	call test();
+}
+.
+
+// 4259+4259=8518
+// 4259

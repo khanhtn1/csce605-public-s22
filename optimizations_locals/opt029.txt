@@ -1,0 +1,29 @@
+// square RIG, move edge between a-d -> coalescing is needed to make the graph simplifiable and 2 colorable
+// a--b
+// |\ |
+// c--d
+
+main
+
+function get_const(n) 
+{   
+    return n;
+};
+
+void function test() {
+    var a,b,c,d;
+
+    let d := call get_const(10);
+    let c := d + 1;
+    let a := c + d;
+    let b := a + c;
+    let d := a;
+    let d := d + b;
+
+    let d := call get_const(d) + 2;
+    call OutputNum(d); // 55
+};
+
+{
+    call test();
+}.

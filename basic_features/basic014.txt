@@ -49,3 +49,7 @@ function max(a1,a2,a3,a4,a5)
         call OutputNum(max_number);
         call OutputNewLine();
 }.
+
+// 22 16 434 170 605
+// 22 434 434 605 
+// 605

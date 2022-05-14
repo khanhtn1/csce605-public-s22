@@ -35,3 +35,8 @@ void function pyramic_print()
     call OutputNewLine();
     call pyramic_print();
 }.
+
+// 5
+// then a pyramic of 1
+// top is 1 
+// bottom has 15 1's

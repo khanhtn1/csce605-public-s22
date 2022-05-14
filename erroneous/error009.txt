@@ -24,7 +24,7 @@ function bar()
 };
 
 {
-    let y := call foo() + 1 ;
+    let y = call foo() + 1 ;
     let y++;
     call OutputNum(y);
     call OutputNewLine();

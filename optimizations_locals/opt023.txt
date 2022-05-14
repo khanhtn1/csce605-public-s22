@@ -1,0 +1,27 @@
+// coalescing example
+
+main
+
+
+function get_const(n)
+{
+    return n;
+};
+
+void function test() {
+    var x,y,z;
+    var a,b;
+
+    let x := call get_const(10);
+    let a := 5 + 5;
+    let y := x;
+    let b := a + 2; 
+    let z := y + b;
+
+    call OutputNum(z); // 22
+    // coalescing, should remove y = x
+};
+
+{
+    call test();
+}.

@@ -1,0 +1,22 @@
+// test019.txt
+// Copy propagation transitive test
+main
+
+void function test() {
+	var a, b, c, d;
+
+	let b := a;
+	let c := b;
+	let d := c;
+	let d := d + 1;
+	
+	call OutputNum(a); // 0 
+	call OutputNum(b); // 0
+	call OutputNum(c); // 0
+	call OutputNum(d); // 1
+};
+
+{
+	call test();
+}
+.

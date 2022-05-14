@@ -1,0 +1,20 @@
+//test032.txt
+// Array handling SSA test
+main
+var i, j, k, w, z, x, y;
+array[ 8 ] a;
+{
+	let i := 1;
+	let a[1] := 5;
+	let x := a[ i ];
+	let k := a[ i ];
+	if a[ i ] < a [ j ] then
+		let a[i] := a[j] + 1 // dead code
+	else 
+		let a[j] := a[i] - 1
+	fi;
+	let k := a[ j ];
+	call OutputNum(k); // 5 - 1 = 4
+	let w := a[ i ];
+	call OutputNum(w) // 5
+}.

@@ -1,0 +1,17 @@
+//test021.txt
+// Very simple interference graph test
+main
+
+void function test() {
+	var a, b;
+
+	let a := 1;
+	let b := 2;
+	let a := a * b * 7;
+	let a := a + b
+};
+
+{
+	call test();
+}
+.

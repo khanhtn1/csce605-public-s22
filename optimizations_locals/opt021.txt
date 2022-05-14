@@ -1,0 +1,27 @@
+//local optimization, Quiz6 CSCE605 S22
+
+main
+
+void function test() {
+    var a,b,c,d,e,f,g,h;
+
+    let a := 7;
+    let b := a + 2;
+    let c := a + b;
+    let d := c + b;
+    let b := c + b;
+    let a := a + b;
+    let e := c + d;
+    let f := c + d;
+    let g := a + b;
+    let h := e + f;
+
+    //g and h are live
+    call OutputNum(g); // 57
+    call OutputNum(h); // 82 
+};
+
+{
+    call test();
+}
+.

@@ -1,0 +1,19 @@
+//test028.txt
+//CSE test
+main
+var a, b,c,d,e;
+{
+	let b :=1;
+    let e := b;
+    
+    if c < 3 then
+        let b := a + 4;
+        let d := b
+    else
+        let c := a + 4 // dead code
+    fi;
+    let a := b + e;
+    call OutputNum(a); // 4 + 1 = 5
+    let d := c + d;
+    call OutputNum(d)  // 0 + 4 = 4 
+}.

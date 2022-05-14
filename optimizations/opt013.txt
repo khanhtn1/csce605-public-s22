@@ -1,0 +1,21 @@
+//test026.txt
+// Killing a subexpression test
+main
+var i, j, k, w, z, x, y;
+array[ 8 ] a, b;
+{
+	let i := 1;
+	let a[1] := 5;
+	let x := a[ i ];
+	let k := a[ i ];
+	let j := 2;
+	let b[j] := 19;
+	while a[ i ] < b[ j ] do
+		let k := a[i] + a[i];
+		let a[i] := k + 1;
+		let z := a[i];
+		call OutputNum(z) // 11 23
+	od; 
+	let w := a[ i ];
+	call OutputNum(w) // 23
+}.

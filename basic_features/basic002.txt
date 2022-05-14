@@ -14,5 +14,5 @@ array [ 4 ][ 4 ] b;
 		let a[ i ] := i;
 		let i := i + 1
 	od;
-	call OutputNum(j)
+	call OutputNum(j) // 4
 }.

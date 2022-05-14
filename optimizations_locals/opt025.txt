@@ -1,0 +1,38 @@
+// Coalescing example, from lecture, 4 coloarable
+// live-in j, k
+
+
+main
+
+
+function get_const(n) 
+{
+    return n;
+};
+
+void function test() {
+    var b,c,d,e,f,g,h,j,k,m;
+
+    let j := call get_const(2);
+    let k := call get_const(3); 
+
+    let g := j + 12;
+    let h := k - 1;
+    let f := g * h;
+    let e := j + 8;
+    let m := j + 16;
+    let b := f + 4;
+    let c := e + 8;
+    let d := c; // remove after coalescing
+    let k := m + 4;
+    let j := b; // remove after coalescing
+
+    call OutputNum(d); // 18
+    call OutputNum(j); // 32
+    call OutputNum(k); // 22
+    // live-out = d,j,k
+};
+
+{
+    call test();
+}.

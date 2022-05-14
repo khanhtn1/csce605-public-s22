@@ -1,0 +1,26 @@
+// coalescing example (practicalities) from lecture, might not have the actual coalescing
+//3 colors
+main
+var a,b,c;
+
+// calculate b * a
+function f(a,b) 
+{
+    var d, e;
+    let d := 0;
+    let e := a;
+    repeat
+        let d := d + b;
+        let e := e - 1;
+    until e == 0;
+    return d;
+}; 
+
+{
+    let a := 10;
+    let b := 5;
+    let c := call f(a,b);
+    call OutputNum(c); // 50
+    let c++;
+    call OutputNum(c); // 51
+}.

@@ -18,8 +18,8 @@ function fibonacci(n)
 {
     let input := call InputNum(); //call with 10
     let result := call fibonacci(input);
-    call OutputNum(input);
+    call OutputNum(input); // 10
     call OutputNewLine();
-    call OutputNum(result);
+    call OutputNum(result); // 55
     call OutputNewLine();
 }.

@@ -1,0 +1,34 @@
+// Constant Folding - fold relation *require input file
+// Dead Code
+main
+
+void function test() {
+	var a, b, c, d;
+
+	let a := 22;
+	let b := 22; 
+	let c := 22;
+	let d := call InputNum(); //call with 22
+	if a == b then
+		if b == c then
+			if c == d then
+                let a += a;
+				call OutputNum(a)
+			else
+				call OutputNum(b);
+			fi;
+		else
+			call OutputNum(c)
+		fi;
+	else
+		let d := call InputNum(); 
+		call OutputNum(d)
+	fi;
+	call OutputNewLine();
+};
+
+{
+	call test();
+}.
+
+// 44

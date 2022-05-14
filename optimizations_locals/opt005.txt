@@ -1,0 +1,30 @@
+// test012.txt
+// From Brandis and Mossenbock
+// The third line in the then block, the two lines before the if and he 
+// lines after the fi are not part of the original test case. 
+// Check phi insertions
+
+main
+
+void function test() {
+	var a, b, c;
+
+	let a := 12;
+	let b := 13;
+	if a < b then
+		//let a := 1;
+		let b := a + 5;
+		let a := a + 1
+	else
+		let a := a + 1;
+		let c := 2
+	fi;
+	//let b := c+1;
+	let a := a + 1;
+	call OutputNum(a); // 14
+    call OutputNum(b)  // 17
+};
+
+{
+	call test();
+}.

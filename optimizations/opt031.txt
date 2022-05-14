@@ -1,0 +1,29 @@
+//Simple parsing test
+//basic001
+main 
+var a,A,a_0, outputnum;
+{
+    let a := 5 + 2;
+    let A := a * -10;
+    let a_0 := A;
+    let outputnum := 3 - 3;
+    let outputnum := a; 
+    let A++; 
+    let A--;
+    let a += 5 + 2;
+    let a -= 5 + -5;
+    let a *= (a_0-a_0+1); 
+    let a /= a;
+    call OutputNum(a);
+    call OutputNewLine();
+    call OutputNum(a_0);
+    call OutputNewLine();
+    call OutputNum(A);
+    call OutputNewLine();
+    call OutputNum(outputnum);
+}.
+
+// a = 1
+// A = -70
+// a_0 = -70
+// outputnum = 7

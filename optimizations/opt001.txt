@@ -1,0 +1,11 @@
+// Constant Folding
+main
+var a;
+{
+	let a := ( ( ( 2 + 1 ) * 2 ) / 2 ) - 1;
+	call OutputNum(a); // 2
+	call OutputNewLine();
+	let a := 5*3+7;
+	call OutputNum(a);  // 22
+	call OutputNewLine()
+}.

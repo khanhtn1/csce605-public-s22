@@ -1,0 +1,43 @@
+// test018.txt
+// Copy propagation test
+// Adapted from Muchnick, p.360
+
+main
+void function foo() {
+	var a, b, c, d, e, f, g, h;
+
+	let c := 1;
+//	let c := a + b;
+	let d := c;
+	let e := d * d;
+	let f := a + c;
+	let g := e;
+	let a := g + d;
+	
+	if a < c then
+		let h := g + 1
+	else
+		let f := d + g;
+		if f > a then
+			let c := 2
+		fi
+	fi;
+	
+	let b := g * a;
+	
+	call OutputNum(a); // 2 
+	call OutputNum(b); // 2
+	call OutputNum(c); // 1 
+	call OutputNum(d); // 1 
+	call OutputNum(e); // 1
+	call OutputNum(f); // 2
+	call OutputNum(g); // 1 
+	call OutputNum(h)  // 0
+};
+
+{
+	call foo();
+}
+.
+
+// 2 2 1 1 1 2 1 0

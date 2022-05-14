@@ -1,0 +1,32 @@
+// test014.txt 
+// Brandis and Mossenbock test for while loops
+// OFE on bar
+main
+var a, b;
+
+function bar( ) {
+	var c, d;
+
+	let c := 1;
+	let d := 2;
+	let a := c + d + b;
+	let a := c + d + b;
+	call OutputNum(35);
+	return 1
+};
+
+{
+	let b := 1000;
+	let a := 1;
+	while a < b do
+	//	let b := a + 1;
+		let a := a * 2;
+		
+		call OutputNum(a);
+		call OutputNum(b)
+	od;
+	let b := a
+}
+.
+
+// 2  1000  4  1000  8  1000  16  1000  32  1000  64  1000  128  1000  256  1000  512  1000  1024  1000

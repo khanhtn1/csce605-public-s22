@@ -1,0 +1,47 @@
+//test025.txt
+// Simple CSE test
+// (I don't like the ones in Muchnick)
+main
+
+void function test() {
+	var a, b, c, d, e, f, g, z;
+	array[4] arr;
+
+	let z := 0;
+	let z := z + 1;
+	let z := z + z;
+	let z := z * z;
+	let b := 1;
+	let c := 2;
+	let a := b + c;
+	let d := b + c;
+	let e := c + b + d;
+	
+	if a != d then
+		let e := c + b + d;
+		let f := a * d;
+		let g := d * a + 4;
+		let b := 5;
+		let e := c + b + d
+	else
+		let f := a / d;
+		let g := d / a
+	fi;
+	
+	let f := a * d;
+	let g := d / a;
+	
+	let arr[1] := g;
+	let arr[1] := g;
+	let arr[1] := g;
+	let f := arr[1];
+	let g := arr[2];
+	let g := arr[2];
+	
+	call OutputNum(f) // 1
+};
+
+{
+	call test();
+}
+.

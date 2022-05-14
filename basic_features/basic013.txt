@@ -28,10 +28,10 @@ void function multi_dim_array()
     
     while i > 0 do
         let i--; //let i := i-1;
-        call OutputNum(a[i]);
+        call OutputNum(a[i]); // 19 -> 10
     od;
 
     call OutputNewLine();
-    call multi_dim_array();
+    call multi_dim_array(); // 8 -> 1
     return;
 }.

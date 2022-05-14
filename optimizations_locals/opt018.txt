@@ -1,0 +1,51 @@
+//test033.txt
+// Array handling SSA test, local array shadows global
+main
+var i, j, k, w, z, x, y;
+array[ 8 ] a;
+
+void function use_global ()
+{
+	let i := 1;
+	let a[1] := 5;
+	let j := 2;
+	let a[j] := 19;
+	if a[ i ] < a [ j ] then
+		let a[i] := a[j] + 1
+	else 
+		let a[j] := a[i] - 1 // dead code
+	fi;
+	let k := a[ j ];
+	call OutputNum(k); // 19
+	let w := a[ i ];
+	call OutputNum(w)  // 20
+};
+
+void function use_local()
+{
+    var i,j;
+    array [10] a;
+
+	let i := 1;
+	let j := 2;
+	let a[i] := 15;
+	let a[j] := 5;
+	if a[ i ] < a [ j ] then
+		let a[i] := a[j] + 1  // dead code
+	else 
+		let a[j] := a[i] - 1
+	fi;
+	let j := a[ j ];
+	call OutputNum(j); // 14
+	let i := a[ i ];
+	call OutputNum(i); // 15
+    let i := 1000;
+    let j := 5000;
+};
+
+{
+	call use_local();
+	call use_global();
+    call OutputNum(i); //must not see 1000 -> 1
+    call OutputNum(j); //must not see 5000 -> 2 
+}.

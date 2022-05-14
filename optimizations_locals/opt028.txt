@@ -1,0 +1,32 @@
+// square RIG, Final 605, bonus question
+
+main
+var a,b,c;
+
+function g(e) 
+{
+    var a,b,c,d;
+    
+    let a := e;
+    if a > 0 then
+        let c := a;
+        let a := a + c;
+        let d := a;
+        let d := d + c;
+    else
+        let b := a;
+        let a := a + b;
+        let d := a;
+        let d := d + b;
+    fi;    
+    return d;
+}; 
+
+{
+    let a := 15;
+    let c := call g(a);
+    call OutputNum(c); // 45
+    let a := -15;
+    let c := call g(a);
+    call OutputNum(c); // -45
+}.

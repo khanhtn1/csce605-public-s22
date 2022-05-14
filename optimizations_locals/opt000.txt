@@ -1,0 +1,20 @@
+// Const Propagation + Const Folding
+// Uninitialized z, y
+main 
+
+void function test() {
+var x, y,z;
+
+    // let z := 0;
+    // let y := 1;
+    let x := 51; 
+    let y := 2 * x + y;
+    let x := x + y * 2 + z; 
+    // call OutputNum(x);
+    call OutputNum(y);
+    // call OutputNum(z);
+};
+
+{
+    call test();
+}.

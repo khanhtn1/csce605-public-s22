@@ -1,0 +1,26 @@
+// star RIG, Final 605, bonus question
+
+main
+var a,b,c;
+
+ // calculate a + b
+function f(a,b) 
+{
+    var d,e,f,g;
+    let c := b;
+    let d := c;
+    let e := d;
+    let f := e;
+    let g := f;
+    let a := a + g;
+    return a;
+}; 
+
+{
+    let a := 10;
+    let b := 5;
+    let c := call f(a,b); 
+    call OutputNum(c); // 15
+    let c++;
+    call OutputNum(c); // 16
+}.

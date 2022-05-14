@@ -1,0 +1,19 @@
+// local optimization, Quiz 8 CSCE 605 S22
+
+main
+var x,y,z,a,b,c,d,e;
+
+{
+    let x := 1;
+    let y := a + b;
+    let z := y * y;
+    let c := y * x;
+    let e := a + b;
+    let d := e * e;
+    let e := x - 1;
+    let b := e + 4;
+    let x := a + b;
+    let y := y * x;   // 0 * 4 = 0
+    //call OutputNum(x);
+    call OutputNum(y); 
+}.

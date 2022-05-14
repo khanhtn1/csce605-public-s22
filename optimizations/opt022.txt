@@ -1,0 +1,45 @@
+// CP and DCE example to motivate coalescing
+
+main
+var x,y,z;
+var a,b;
+
+function get_const(n) 
+{
+    return n;
+};
+
+void function copy_prop_fail() 
+{
+    var x,y,z;
+    var a,b,c;
+
+    let a := call get_const(2);
+    let b := call get_const(3);
+    let c := call get_const(4);
+    
+    let x := a + b;
+    let y := c;
+    if c > a then
+        let y := x;
+    fi;
+    let z := y + 4;
+
+    //call OutputNum(y);
+    call OutputNum(z); // 9
+};
+
+{
+    let a := call get_const(2);
+    let b := call get_const(3);
+
+    let x := a + b;
+    let y := x;
+    let z := y + 4;
+
+    //call OutputNum(y);
+    call OutputNum(z); // 9
+
+    call copy_prop_fail();
+
+}.

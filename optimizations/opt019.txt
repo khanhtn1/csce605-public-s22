@@ -1,0 +1,48 @@
+// giant optimization - 605 final Q7 mod to have smaller numbers
+// CSE, CP, DCE, CF, AS
+main
+var x, y,z;
+var n,s,i,j,m,p,f;
+var a,b,c;
+var r,v,u,t;
+{
+	
+	let n := 5;
+	let s := 0;
+	let i := 0;
+	while i <= n  do
+		let j := i;
+		let m := n;
+		let p := m;
+		let f := 1;
+		while p != 1 do
+			let f := f * p;
+			let p := p - 1
+		od;
+		let a := f;
+		let p := m - j;
+		let f := 1;
+		while p != 1 do
+			let f := f * p;
+			let p := p - 1
+		od;
+		let b := f;
+		let c := a + b;
+		let s := s + c;
+		let i := i + 1
+	od;
+
+    let y := s;
+    let z := 4;
+    let v := y + y;
+    let u := z + 2;
+    let r := s + s;
+    let t := r + v;
+    let x := u + t;
+
+	
+    //s and x are live
+	call OutputNum(s); // 873
+    call OutputNum(x); // 3498
+}
+.

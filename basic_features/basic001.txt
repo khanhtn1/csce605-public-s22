@@ -22,3 +22,8 @@ var a,A,a_0, outputnum;
     call OutputNewLine();
     call OutputNum(outputnum);
 }.
+
+// a = 1
+// A = -70
+// a_0 = -70
+// outputnum = 7
